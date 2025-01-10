@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class ProductOption extends Model
 {
     use HasFactory;
+
+    public function option()
+    {
+        return $this->belongsTo(Option::class);
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
